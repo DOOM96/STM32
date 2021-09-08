@@ -149,6 +149,12 @@ void SysTick_Handler(void)
 /*  file (startup_stm32f10x_md.s).                                            */
 /******************************************************************************/
 
+void EXTI0_IRQHandler(void)
+{
+	GPIOC->ODR ^= (1<<13);
+	EXTI->PR |= EXTI_PR_PR0;
+}
+
 /**
   * @brief  This function handles PPP interrupt request.
   * @param  None
