@@ -1,0 +1,9 @@
+.metadata
+.settings
+.cproject
+.project
+*.log
+*.ld
+*.launch
+/Debug
+Libraries/
